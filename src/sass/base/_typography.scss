@@ -1,0 +1,27 @@
+@use './colors' as c;
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('/assets/fonts/static/JetBrainsMono-Bold.woff2') format('woff2'),
+    url('/assets/fonts/static/JetBrainsMono-Bold.woff') format('woff'),
+    url('/assets/fonts/static/JetBrainsMono-Bold.ttf') format('.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('/assets/fonts/static/JetBrainsMono-BoldItalic.woff2')
+      format('woff2'),
+    url('/assets/fonts/static/JetBrainsMono-BoldItalic.woff') format('woff'),
+    url('/assets/fonts/static/JetBrainsMono-BoldItalic.ttf') format('.ttf');
+  font-weight: 700;
+  font-style: italic;
+}
+
+body {
+  font-family: 'JetBrainsMono', Courier, monospace;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: c.$clr-almost-white;
+}

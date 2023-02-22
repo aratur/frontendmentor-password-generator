@@ -1,0 +1,14 @@
+.checkbox__img {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--clr-almost-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+  &_checked {
+    background-color: var(--clr-neon-green);
+    border-color: var(--clr-neon-green);
+  }
+}

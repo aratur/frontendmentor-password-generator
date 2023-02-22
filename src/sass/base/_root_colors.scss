@@ -1,0 +1,13 @@
+@use './colors' as *;
+
+:root {
+  // primary colors
+  --clr-almost-white: #{$clr-almost-white};
+  --clr-dark-grey: #{$clr-dark-grey};
+  --clr-grey: #{$clr-grey};
+  --clr-very-dark-grey: #{$clr-very-dark-grey};
+  --clr-neon-green: #{$clr-neon-green};
+  --clr-red: #{$clr-red};
+  --clr-orange: #{$clr-orange};
+  --clr-yellow: #{$clr-yellow};
+}
