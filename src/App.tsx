@@ -172,7 +172,7 @@ const App = (props: Props) => {
                   sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    rowGap: media ? 4 : 2,
+                    rowGap: 2,
                   }}
                 >
                   <CharacterLength charLength={charLength} />

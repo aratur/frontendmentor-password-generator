@@ -11,21 +11,21 @@
   --clr-weak: var(--clr-orange);
   --clr-medium: var(--clr-yellow);
   --clr-strong: var(--clr-neon-green);
-  border: 1px solid var(--clr-strength);
+  border: 2px solid var(--clr-strength);
   width: 10px;
   height: 28px;
 
   &[data-type='too weak!'] {
     &:is(.strength__bar__1) {
       background-color: var(--clr-to-weak);
-      border: 1px solid var(---clr-to-weak);
+      border: 2px solid var(---clr-to-weak);
     }
   }
 
   &[data-type='weak'] {
     &:is(.strength__bar__1, .strength__bar__2) {
       background-color: var(--clr-weak);
-      border: 1px solid var(---clr-weak);
+      border: 2px solid var(---clr-weak);
     }
   }
 
