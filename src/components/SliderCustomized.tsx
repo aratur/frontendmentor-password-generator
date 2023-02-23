@@ -15,7 +15,7 @@ const SliderCustomized = (props: Props) => {
   const { value, max, handleChange } = props;
 
   return (
-    <Box sx={{ marginLeft: 2, marginTop: 0 }}>
+    <Box sx={{ marginInline: 2, marginTop: 0 }}>
       <Slider
         value={value}
         max={max}
