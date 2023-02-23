@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React, {
   Dispatch,
   SetStateAction,
@@ -34,12 +35,27 @@ const maxCharLength = 20;
 const maxCharsetLength = 26 + 26 + 10 + 15;
 const placeholder = 'P4$5W0rD!';
 
-const App = () => {
-  const [upperCase, setUpperCase] = useState<boolean>(true);
-  const [lowerCase, setLowerCase] = useState<boolean>(true);
-  const [includeNumbers, setIncludeNumbers] = useState<boolean>(true);
-  const [includeSymbols, setIncludeSymbols] = useState<boolean>(false);
-  const [charLength, setCharLength] = useState(10);
+type Props = {
+  initCharLength?: number;
+  initUpperCase?: boolean;
+  initLowerCase?: boolean;
+  initNumbers?: boolean;
+  initSymbols?: boolean;
+};
+
+const App = (props: Props) => {
+  const {
+    initCharLength = 0,
+    initLowerCase = false,
+    initNumbers = false,
+    initSymbols = false,
+    initUpperCase = false,
+  } = props;
+  const [upperCase, setUpperCase] = useState<boolean>(initUpperCase);
+  const [lowerCase, setLowerCase] = useState<boolean>(initLowerCase);
+  const [includeNumbers, setIncludeNumbers] = useState<boolean>(initNumbers);
+  const [includeSymbols, setIncludeSymbols] = useState<boolean>(initSymbols);
+  const [charLength, setCharLength] = useState(initCharLength);
   const [password, setPassword] = useState(placeholder);
 
   const handleChange = useCallback((e: Event): void => {
@@ -128,7 +144,7 @@ const App = () => {
     <div className="App">
       <main className="main">
         <ThemeProvider theme={themeMain}>
-          <Stack spacing={1}>
+          <Stack spacing={media ? 4 : 2}>
             <Box>
               <Typography
                 variant={media ? 'h2' : 'h3'}
@@ -145,37 +161,45 @@ const App = () => {
                 spacing={media ? 4 : 2}
                 sx={{ backgroundColor: 'primary.dark', padding: media ? 4 : 2 }}
               >
-                <CharacterLength charLength={charLength} />
-                <SliderCustomized
-                  handleChange={handleChange}
-                  max={maxCharLength}
-                  value={charLength}
-                />
-                <Stack
-                  spacing={media ? 1 : 1}
-                  sx={{ backgroundColor: 'primary.dark', padding: 0 }}
+                <Box
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    rowGap: media ? 4 : 2,
+                  }}
                 >
-                  <CheckboxCustomized
-                    checked={upperCase}
-                    setStateFunction={setUpperCase}
-                    label="Include Uppercase Letters"
+                  <CharacterLength charLength={charLength} />
+                  <SliderCustomized
+                    handleChange={handleChange}
+                    max={maxCharLength}
+                    value={charLength}
                   />
-                  <CheckboxCustomized
-                    checked={lowerCase}
-                    setStateFunction={setLowerCase}
-                    label="Include Lowercase Letters"
-                  />
-                  <CheckboxCustomized
-                    checked={includeNumbers}
-                    setStateFunction={setIncludeNumbers}
-                    label="Include Numbers"
-                  />
-                  <CheckboxCustomized
-                    checked={includeSymbols}
-                    setStateFunction={setIncludeSymbols}
-                    label="Include Symbols"
-                  />
-                </Stack>
+                  <Stack
+                    spacing={media ? 1 : 1}
+                    sx={{ backgroundColor: 'primary.dark', padding: 0 }}
+                  >
+                    <CheckboxCustomized
+                      checked={upperCase}
+                      setStateFunction={setUpperCase}
+                      label="Include Uppercase Letters"
+                    />
+                    <CheckboxCustomized
+                      checked={lowerCase}
+                      setStateFunction={setLowerCase}
+                      label="Include Lowercase Letters"
+                    />
+                    <CheckboxCustomized
+                      checked={includeNumbers}
+                      setStateFunction={setIncludeNumbers}
+                      label="Include Numbers"
+                    />
+                    <CheckboxCustomized
+                      checked={includeSymbols}
+                      setStateFunction={setIncludeSymbols}
+                      label="Include Symbols"
+                    />
+                  </Stack>
+                </Box>
                 <Strength strength={getStrength()} />
                 <ButtonCustomized handleClicked={generatePassword} />
               </Stack>

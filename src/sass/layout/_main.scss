@@ -6,9 +6,6 @@
   padding: 1rem;
   margin-block: 2rem;
   @include m.media('desktop', 'tablet') {
-    margin-block: 101px;
+    margin-block: 117px;
   }
-}
-.main * {
-  // outline: 1px solid hsl(0, 19%, 83%, 0.25);
 }

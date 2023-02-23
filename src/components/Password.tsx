@@ -59,6 +59,7 @@ const Password = (props: Props) => {
       </FormControl>
       <div className="password__copy__message__container">
         <div
+          data-testid="copied"
           className={`password__copy__message ${
             showCopied ? 'password__copy__message_show' : ''
           }`}

@@ -41,10 +41,26 @@ const Strength = (props: Props) => {
           {strength}
         </Typography>
         <div />
-        <div className="strength__bar strength__bar__1" data-type={strength} />
-        <div className="strength__bar strength__bar__2" data-type={strength} />
-        <div className="strength__bar strength__bar__3" data-type={strength} />
-        <div className="strength__bar strength__bar__4" data-type={strength} />
+        <div
+          className="strength__bar strength__bar__1"
+          data-testid="bar"
+          data-type={strength}
+        />
+        <div
+          className="strength__bar strength__bar__2"
+          data-testid="bar"
+          data-type={strength}
+        />
+        <div
+          className="strength__bar strength__bar__3"
+          data-testid="bar"
+          data-type={strength}
+        />
+        <div
+          className="strength__bar strength__bar__4"
+          data-testid="bar"
+          data-type={strength}
+        />
       </div>
     </Box>
   );

@@ -5,12 +5,16 @@
     "jest": true
   },
   "rules": {
-    "no-console": "error",
+    "no-console": "warn",
     "import/first": "error",
     "react/prop-types": "off",
     "react/function-component-definition": [
       2,
       { "namedComponents": "arrow-function" }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.test.ts", "**/*.test.tsx"] }
     ]
   },
   "extends": [
@@ -26,6 +30,7 @@
     "plugin:testing-library/react",
     "prettier"
   ],
+  "ignorePatterns": ["*.js", "*.ts"],
   "parser": "@typescript-eslint/parser",
   "root": true,
   "plugins": ["react", "@typescript-eslint"],

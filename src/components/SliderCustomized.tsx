@@ -34,6 +34,9 @@ const SliderCustomized = (props: Props) => {
           width: 28,
           backgroundColor: '#fff',
           transition: 'background-color 100ms ease-in-out',
+          borderWidth: '2px',
+          borderStyle: 'solid',
+          borderColor: 'secondary.light',
           boxShadow: iOSBoxShadow,
           '&:focus, &:hover, &.Mui-active': {
             boxShadow:

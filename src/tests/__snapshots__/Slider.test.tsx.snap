@@ -1,0 +1,37 @@
+// Vitest Snapshot v1
+
+exports[`tests Slider > matches snapshot 1`] = `
+<div>
+  <span
+    class="MuiSlider-root MuiSlider-colorSecondary MuiSlider-sizeMedium css-5ejlq0-MuiSlider-root"
+  >
+    <span
+      class="MuiSlider-rail css-14pt78w-MuiSlider-rail"
+    />
+    <span
+      class="MuiSlider-track css-1gv0vcd-MuiSlider-track"
+      style="left: 0%; width: 10%;"
+    />
+    <span
+      class="MuiSlider-thumb MuiSlider-thumbSizeMedium MuiSlider-thumbColorSecondary css-frv3qg-MuiSlider-thumb"
+      data-focusvisible="false"
+      data-index="0"
+      style="left: 10%;"
+    >
+      <input
+        aria-orientation="horizontal"
+        aria-valuemax="10"
+        aria-valuemin="0"
+        aria-valuenow="1"
+        data-index="0"
+        max="10"
+        min="0"
+        step="1"
+        style="border: 0px; height: 100%; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 100%; direction: ltr;"
+        type="range"
+        value="1"
+      />
+    </span>
+  </span>
+</div>
+`;

@@ -17,6 +17,7 @@ const CharacterLength = (props: Props) => {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+        height: '43px',
       }}
     >
       <Typography variant={media ? 'body2' : 'body1'} component="p">

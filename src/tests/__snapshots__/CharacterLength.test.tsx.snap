@@ -1,0 +1,21 @@
+// Vitest Snapshot v1
+
+exports[`Character Length > snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-4rmty7"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    >
+      Character Length
+       
+    </p>
+    <p
+      class="MuiTypography-root MuiTypography-h2 css-wf8t3v-MuiTypography-root"
+    >
+      1234
+    </p>
+  </div>
+</div>
+`;
