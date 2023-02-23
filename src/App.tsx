@@ -181,9 +181,13 @@ const App = (props: Props) => {
                     max={maxCharLength}
                     value={charLength}
                   />
-                  <Stack
-                    spacing={media ? 1 : 1}
-                    sx={{ backgroundColor: 'primary.dark', padding: 0 }}
+                  <Box
+                    sx={{
+                      backgroundColor: 'primary.dark',
+                      padding: 0,
+                      display: 'flex',
+                      flexDirection: 'column',
+                    }}
                   >
                     <CheckboxCustomized
                       checked={upperCase}
@@ -205,7 +209,7 @@ const App = (props: Props) => {
                       setStateFunction={setIncludeSymbols}
                       label="Include Symbols"
                     />
-                  </Stack>
+                  </Box>
                 </Box>
                 <Strength strength={getStrength()} />
                 <ButtonCustomized handleClicked={generatePassword} />

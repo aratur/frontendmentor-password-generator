@@ -35,6 +35,8 @@ const CheckboxCustomized = (props: Props) => {
     <FormControlLabel
       sx={{
         marginInline: 0,
+        paddingLeft: '2px',
+        height: '42px',
         '&:hover .checkbox__img, &:focus .checkbox__img': {
           borderColor: 'primary.main',
         },
