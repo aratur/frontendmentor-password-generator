@@ -21,7 +21,8 @@ const Strength = (props: Props) => {
         alignItems: 'center',
         height: media ? '72px' : '56px',
         backgroundColor: 'secondary.dark',
-        padding: 2,
+        paddingBlock: 2,
+        paddingInline: 3,
       }}
     >
       <Typography
