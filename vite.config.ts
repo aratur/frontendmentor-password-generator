@@ -10,7 +10,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    include: ['src/**/*.{test}.{js,ts,jsx,tsx}'],
     setupFiles: './src/tests/setup.js',
     coverage: {
       provider: 'istanbul', // or 'c8'

@@ -157,9 +157,16 @@ const App = (props: Props) => {
             </Box>
             <Stack spacing={media ? 3 : 2}>
               <Password password={password} placeholder={placeholder} />
-              <Stack
-                spacing={media ? 4 : 2}
-                sx={{ backgroundColor: 'primary.dark', padding: media ? 4 : 2 }}
+              <Box
+                sx={{
+                  backgroundColor: 'primary.dark',
+                  paddingInline: media ? 4 : 2,
+                  paddingBottom: media ? 4 : 2,
+                  paddingTop: '24px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  rowGap: media ? 4 : 2,
+                }}
               >
                 <Box
                   sx={{
@@ -202,7 +209,7 @@ const App = (props: Props) => {
                 </Box>
                 <Strength strength={getStrength()} />
                 <ButtonCustomized handleClicked={generatePassword} />
-              </Stack>
+              </Box>
             </Stack>
           </Stack>
         </ThemeProvider>

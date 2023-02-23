@@ -2,7 +2,8 @@
 @use 'sass:list';
 
 $breakpoint-desktop: 1440px;
-$breakpoint-tablet: 768px;
+// $breakpoint-tablet: 768px;
+$breakpoint-tablet: 700px;
 
 $breakpoints: (
   mobile: calc($breakpoint-tablet - 1px),
