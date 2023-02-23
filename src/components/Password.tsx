@@ -4,6 +4,7 @@ import IconButton from '@mui/material/IconButton';
 import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import copyImg from '../assets/images/icon-copy.svg';
+import useMediaHook from '../utils/mediaHook';
 
 type Props = {
   password: string;
@@ -22,6 +23,8 @@ const Password = (props: Props) => {
     }, 2000);
     return () => clearTimeout(handle);
   }, [password]);
+
+  const media = useMediaHook();
 
   return (
     <Box
@@ -44,6 +47,7 @@ const Password = (props: Props) => {
             fontSize: '32px',
             lineHeight: '42px',
             color: 'secondary.light',
+            paddingLeft: media ? 3 : 1,
             '& .MuiOutlinedInput-notchedOutline': {
               border: 'none',
               top: 0,

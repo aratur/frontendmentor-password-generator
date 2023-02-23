@@ -46,7 +46,8 @@ const CheckboxCustomized = (props: Props) => {
       control={
         <Checkbox
           sx={{
-            marginRight: matches ? '25px' : '21px',
+            marginLeft: -1,
+            marginRight: matches ? '16px' : '12px',
             '&:hover *': {
               borderColor: 'secondary.dark.',
             },
