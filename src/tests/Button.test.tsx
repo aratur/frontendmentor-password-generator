@@ -6,13 +6,13 @@ describe('ButtonCustomized', () => {
   it('snapshot', () => {
     const handleClicked = vi.fn();
     const { container } = render(
-      <ButtonCustomized handleClicked={handleClicked} />
+      <ButtonCustomized name="Generate" onClick={handleClicked} />
     );
     expect(container).toMatchSnapshot();
   });
   it('calls prop function when clicked', () => {
     const handleClicked = vi.fn();
-    render(<ButtonCustomized handleClicked={handleClicked} />);
+    render(<ButtonCustomized name="Generate" onClick={handleClicked} />);
     const button = screen.getByRole('button');
     fireEvent.click(button);
     expect(handleClicked).toHaveBeenCalled();

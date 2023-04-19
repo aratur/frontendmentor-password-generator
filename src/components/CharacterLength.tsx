@@ -1,14 +1,15 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import useMediaHook from '../utils/mediaHook';
+import useMediaHook from '../hooks/mediaHook';
 
 type Props = {
   charLength: number;
+  label: string;
 };
 
 const CharacterLength = (props: Props) => {
-  const { charLength } = props;
+  const { charLength, label } = props;
   const media = useMediaHook();
   return (
     <Box
@@ -21,7 +22,7 @@ const CharacterLength = (props: Props) => {
       }}
     >
       <Typography variant={media ? 'body2' : 'body1'} component="p">
-        Character Length{' '}
+        {label}
       </Typography>
       <Typography variant={media ? 'h1' : 'h2'} component="p" color="primary">
         {charLength}

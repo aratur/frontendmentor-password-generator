@@ -12,14 +12,14 @@ const values: Array<StrengthTypes> = [
 
 describe('test Strength component', () => {
   it('to have 4 bars', () => {
-    render(<Strength strength="too weak!" />);
+    render(<Strength label="Strength" strength="too weak!" />);
     const strengthBars = screen.getAllByTestId('bar');
     expect(strengthBars.length).toBe(4);
   });
   it('to have 4 bars with props value set on data attribute', () => {
     for (const item of values) {
       const value = item as StrengthTypes;
-      render(<Strength strength={value} />);
+      render(<Strength label="Strength" strength={value} />);
       const strengthBars = screen.getAllByTestId('bar');
       strengthBars.forEach((b) => {
         expect(b.dataset.type).toBe(value);
@@ -30,7 +30,7 @@ describe('test Strength component', () => {
   it('to have proper label', () => {
     for (const item of values) {
       const value = item as StrengthTypes;
-      render(<Strength strength={value} />);
+      render(<Strength label="Strength" strength={value} />);
       const header = screen.getByRole('heading');
       expect(header.innerHTML).toBe(value);
       cleanup();

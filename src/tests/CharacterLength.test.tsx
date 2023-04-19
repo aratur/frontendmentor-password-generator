@@ -4,11 +4,13 @@ import CharacterLength from '../components/CharacterLength';
 
 describe('Character Length', () => {
   it('snapshot', () => {
-    const { container } = render(<CharacterLength charLength={1234} />);
+    const { container } = render(
+      <CharacterLength label="Character Length" charLength={1234} />
+    );
     expect(container).toMatchSnapshot();
   });
   it('renders props', () => {
-    render(<CharacterLength charLength={1234} />);
+    render(<CharacterLength label="Character Length" charLength={1234} />);
     const chars = screen.getByText(/1234/i);
     expect(chars).toBeInTheDocument();
   });

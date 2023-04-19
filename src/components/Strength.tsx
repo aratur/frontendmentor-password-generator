@@ -1,16 +1,17 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { Typography } from '@mui/material';
-import useMediaHook from '../utils/mediaHook';
+import useMediaHook from '../hooks/mediaHook';
 
 export type StrengthTypes = 'too weak!' | 'weak' | 'medium' | 'strong' | '';
 
 type Props = {
   strength: StrengthTypes;
+  label: string;
 };
 
 const Strength = (props: Props) => {
-  const { strength } = props;
+  const { strength, label } = props;
   const media = useMediaHook();
   return (
     <Box
@@ -31,7 +32,7 @@ const Strength = (props: Props) => {
         textTransform="uppercase"
         color="primary.light"
       >
-        Strength
+        {label}
       </Typography>
       <div className="strength">
         <Typography
@@ -43,22 +44,22 @@ const Strength = (props: Props) => {
         </Typography>
         <div />
         <div
-          className="strength__bar strength__bar__1"
+          className="strength__bar strength__bar-1"
           data-testid="bar"
           data-type={strength}
         />
         <div
-          className="strength__bar strength__bar__2"
+          className="strength__bar strength__bar-2"
           data-testid="bar"
           data-type={strength}
         />
         <div
-          className="strength__bar strength__bar__3"
+          className="strength__bar strength__bar-3"
           data-testid="bar"
           data-type={strength}
         />
         <div
-          className="strength__bar strength__bar__4"
+          className="strength__bar strength__bar-4"
           data-testid="bar"
           data-type={strength}
         />

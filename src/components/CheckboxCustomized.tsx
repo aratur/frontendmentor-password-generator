@@ -7,7 +7,7 @@ import React, {
 } from 'react';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import useMediaHook from '../utils/mediaHook';
+import useMediaHook from '../hooks/mediaHook';
 
 type Props = {
   checked: boolean;

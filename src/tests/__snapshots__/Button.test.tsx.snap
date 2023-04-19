@@ -17,7 +17,7 @@ exports[`ButtonCustomized > snapshot 1`] = `
     >
       <img
         alt="arrow"
-        class="button__icon_hover"
+        class="button__icon--hover"
         src="/src/assets/images/icon-arrow-right.svg"
       />
     </span>

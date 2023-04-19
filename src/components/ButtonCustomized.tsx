@@ -1,21 +1,22 @@
 import React from 'react';
-import Button from '@mui/material/Button';
+import Button, { ButtonProps } from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import arrowImg from '../assets/images/icon-arrow-right.svg';
-import useMediaHook from '../utils/mediaHook';
+import useMediaHook from '../hooks/mediaHook';
 
-type Props = {
-  handleClicked: () => void;
-};
+interface Props extends ButtonProps {
+  onClick: () => void;
+  name: string;
+}
 
 const ButtonCustomized = (props: Props) => {
-  const { handleClicked } = props;
+  const { onClick, name, ...otherProps } = props;
   const media = useMediaHook();
   return (
     <Button
-      onClick={handleClicked}
+      onClick={onClick}
       endIcon={
-        <img className="button__icon_hover" src={arrowImg} alt="arrow" />
+        <img className="button__icon--hover" src={arrowImg} alt="arrow" />
       }
       sx={{
         backgroundColor: 'primary.main',
@@ -37,9 +38,10 @@ const ButtonCustomized = (props: Props) => {
           },
         },
       }}
+      {...otherProps}
     >
       <Typography variant={media ? 'body2' : 'h3'} component="span">
-        Generate
+        {name}
       </Typography>
     </Button>
   );

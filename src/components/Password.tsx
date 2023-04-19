@@ -4,15 +4,16 @@ import IconButton from '@mui/material/IconButton';
 import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import copyImg from '../assets/images/icon-copy.svg';
-import useMediaHook from '../utils/mediaHook';
+import useMediaHook from '../hooks/mediaHook';
 
 type Props = {
   password: string;
   placeholder: string;
+  copyLabel: string;
 };
 
 const Password = (props: Props) => {
-  const { password, placeholder } = props;
+  const { password, placeholder, copyLabel } = props;
   const [showCopied, setShowCopied] = useState(false);
 
   const handleCopy = useCallback(() => {
@@ -61,18 +62,18 @@ const Password = (props: Props) => {
           }}
         />
       </FormControl>
-      <div className="password__copy__message__container">
+      <div className="copy-password__container">
         <div
           data-testid="copied"
-          className={`password__copy__message ${
-            showCopied ? 'password__copy__message_show' : ''
+          className={`copy-password__message ${
+            showCopied ? 'copy-password__message--visible' : ''
           }`}
         >
-          Copied
+          {copyLabel}
         </div>
       </div>
       <IconButton onClick={handleCopy}>
-        <img className="password__copy" src={copyImg} alt="copy" />
+        <img className="copy-password" src={copyImg} alt="copy" />
       </IconButton>
     </Box>
   );

@@ -12,9 +12,11 @@ describe('Password component', () => {
       },
     });
 
-    render(<Password password="1234" placeholder="placeholder" />);
+    render(
+      <Password copyLabel="Copy" password="1234" placeholder="placeholder" />
+    );
     const copiedHidden = screen.getByTestId('copied');
-    expect(copiedHidden).not.toHaveClass('password__copy__message_show');
+    expect(copiedHidden).not.toHaveClass('copy-password__message--visible');
   });
   it('copies password shows copied message', () => {
     // mock clipboard
@@ -24,11 +26,13 @@ describe('Password component', () => {
       },
     });
 
-    render(<Password password="1234" placeholder="placeholder" />);
+    render(
+      <Password copyLabel="Copy" password="1234" placeholder="placeholder" />
+    );
     const button = screen.getByRole('button');
     fireEvent.click(button);
     expect(window.navigator.clipboard.writeText).toBeCalledWith('1234');
     const copied = screen.getByTestId('copied');
-    expect(copied).toHaveClass('password__copy__message_show');
+    expect(copied).toHaveClass('copy-password__message--visible');
   });
 });

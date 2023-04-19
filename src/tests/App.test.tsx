@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import App from '../App';
+import App from './AppWithTranslation';
 // import SliderCustomized from '../components/SliderCustomized';
 
 type Props = {
@@ -35,7 +35,7 @@ describe('Main Application component', () => {
   });
   it('renders App', () => {
     render(<App />);
-    const title = screen.getByText(/Password Generator/i);
+    const title = screen.getByText(/appName/i);
     expect(title).toBeInTheDocument();
   });
   it('renders with no password', () => {
