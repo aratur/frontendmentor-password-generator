@@ -23,14 +23,14 @@
   }
 
   &[data-type='weak'] {
-    &:is(.strength__bar-1, .strength__bar__2) {
+    &:is(.strength__bar-1, .strength__bar-2) {
       background-color: var(--clr-weak);
       border: 2px solid var(---clr-weak);
     }
   }
 
   &[data-type='medium'] {
-    &:is(.strength__bar-1, .strength__bar__2, .strength__bar-3) {
+    &:is(.strength__bar-1, .strength__bar-2, .strength__bar-3) {
       background-color: var(--clr-medium);
       border: 1px solid var(---clr-medium);
     }
@@ -39,7 +39,7 @@
   &[data-type='strong'] {
     &:is(
         .strength__bar-1,
-        .strength__bar__2,
+        .strength__bar-2,
         .strength__bar-3,
         .strength__bar-4
       ) {
