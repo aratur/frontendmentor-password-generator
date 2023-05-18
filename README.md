@@ -1,5 +1,7 @@
 # Frontend Mentor - Password generator app solution
 
+Strong contrasted user interface. Generates a password based on the selected inclusion options. Customized UI components from Material UI library. For internationalization React i18next framework was used in this project.
+
 This is a solution to the [Password generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh).
 
 ## Table of contents
@@ -45,5 +47,4 @@ Solution screenshot
 
 ## Author
 
-- Frontend Mentor - [profile](https://www.frontendmentor.io/profile/aratur)
 - Website - [linkedin](https://www.linkedin.com/in/artur-jedrzejczak/)
